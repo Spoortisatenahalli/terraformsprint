@@ -2,7 +2,7 @@ name : Terraform actions
 
 env: 
 
-  Message: Spoworkingdr
+  Message: Spoorkingdr
 
 on:
 
