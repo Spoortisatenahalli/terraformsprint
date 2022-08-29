@@ -6,6 +6,6 @@ variable "check_status" {
    default = true
 }
 
-variable "demo_size" {
-  type = number
-}
+# variable "demo_size" {
+#   type = number
+# }
