@@ -49,13 +49,13 @@ jobs:
          
       - name: Validate
         id: validate
-        run: terraform validate
+        run: terraform validate -no-color
         working-directory: ${{env.working-directry}}
 
          
       - name: plan
         id: plan
-        run: terraform plan
+        run: terraform plan -no-color
         working-directory: ${{env.working-directry}}
 
          
