@@ -26,39 +26,39 @@ jobs:
       AWS_SESSION_TOKEN : ${{secrets.AWS_SESSION_TOKEN}}
       
 
-      steps:
+    steps:
 
-       - name: checkout
-         uses: actions/checkout@v3
+      - name: checkout
+        uses: actions/checkout@v3
+        
+      - name: setu 
+        uses: hashicorp/setup-terraform@v2
+        with :
+          terraform_version: 1.1.7
 
-       - name: setup
-         uses: hashicorp/setup-terraform@v2
-         with :
-           terraform_version: 1.1.7
+      - name: Inatilize
+        id: init
+        run : terraform init
+        working-directory : "./ec2/example"
 
-       - name: Inatilize
-         id: init
-         run : terraform init
-         working-directory : "./ec2/example"
-
-       - name: Format
-         id: fmt
-         run: terraform fmt
-         working-directory : "./ec2/example"
-
-         
-       - name: Validate
-         id: validate
-         run: terraform validate
-         working-directory : "./ec2/example"
+      - name: Format
+        id: fmt
+        run: terraform fmt
+        working-directory : "./ec2/example"
 
          
-       - name: plan
-         id: plan
-         run: terraform plan
-         working-directory : "./ec2/example"
+      - name: Validate
+        id: validate
+        run: terraform validate
+        working-directory : "./ec2/example"
 
          
-       - name: Apply
-         run: terraform apply -auto-approve
-         working-directory : "./ec2/example"
+      - name: plan
+        id: plan
+        run: terraform plan
+        working-directory : "./ec2/example"
+
+         
+      - name: Apply
+        run: terraform apply -auto-approve
+        working-directory : "./ec2/example 
