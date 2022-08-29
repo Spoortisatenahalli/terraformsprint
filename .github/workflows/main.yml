@@ -2,7 +2,7 @@ name : Terraform actions
 
 env: 
 
-  Message: Spoorti
+  Message: Spoorti satenahalli
 
 on:
 
