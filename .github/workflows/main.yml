@@ -1,7 +1,7 @@
 name : Terraform actions
 
 env: 
-
+  working-directry : ./ec2/example
   Message: Spoorti satenahalli
 
 on:
@@ -39,26 +39,26 @@ jobs:
       - name: Inatilize
         id: init
         run : terraform init
-        working-directory : "./ec2/example"
+        working-directory: ${{env.working-directry}}
 
       - name: Format
         id: fmt
         run: terraform fmt
-        working-directory : "./ec2/example"
+        working-directory: ${{env.working-directry}}
 
          
       - name: Validate
         id: validate
         run: terraform validate
-        working-directory : "./ec2/example"
+        working-directory: ${{env.working-directry}}
 
          
-      # - name: plan
-      #   id: plan
-      #   run: terraform plan
-      #   working-directory : "./ec2/example"
+      - name: plan
+        id: plan
+        run: terraform plan
+        working-directory: ${{env.working-directry}}
 
          
-      # - name: Apply
-      #   run: terraform apply -auto-approve
-      #   working-directory : "./ec2/example"
+      - name: Apply
+        run: terraform apply -auto-approve
+        working-directory: ${{env.working-directry}}
