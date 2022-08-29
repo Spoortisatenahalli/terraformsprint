@@ -1,0 +1,20 @@
+# name : Terraform actions practice
+
+# env: 
+#   Message: Spoorti's working dir
+
+# on:
+#   push:
+#     branches: ["main", "master"]
+#   pull_request:
+#     branches: ["main" , "master"]
+
+#   workflow_dispatch:
+
+# jobs:
+
+#   terraform:
+#     name: 'terraform fmt'
+#     runs-on : ubuntu-latest
+#     env:
+#       AWS
