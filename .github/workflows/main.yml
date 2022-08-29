@@ -14,7 +14,7 @@ on:
 
   workflow_dispatch:
 
-  jobs:
+jobs:
 
   terraform:
     name: 'terraform fmt'
