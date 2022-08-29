@@ -6,9 +6,9 @@ module "aws_iam_users" {
 }
 
 
-# module "my-bucket-module" {
-#   source      = "../../s3"
-#   bucket_name = var.bucket_name
-# }
+module "my-bucket-module" {
+  source      = "../../s3"
+  bucket_name = var.bucket_name
+}
 
 
