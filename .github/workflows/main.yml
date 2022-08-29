@@ -53,12 +53,12 @@ jobs:
         working-directory : "./ec2/example"
 
          
-      - name: plan
-        id: plan
-        run: terraform plan
-        working-directory : "./ec2/example"
+      # - name: plan
+      #   id: plan
+      #   run: terraform plan
+      #   working-directory : "./ec2/example"
 
          
-      - name: Apply
-        run: terraform apply -auto-approve
-        working-directory : "./ec2/example"
+      # - name: Apply
+      #   run: terraform apply -auto-approve
+      #   working-directory : "./ec2/example"
