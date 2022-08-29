@@ -31,7 +31,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: setu 
+      - name: setup
         uses: hashicorp/setup-terraform@v2
         with :
           terraform_version: 1.1.7
